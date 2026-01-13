@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        #res{
+            border: 2px solid black;
+            height: 60px;
+            width: 250px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" id="n1">
+    +
+    <input type="number" id="n2">
+    <input type="submit" value="Somar" onclick="somar()">
+    <input type="reset" value="Limpar" onclick="limpar()">
+    <br><br>
+    <div id="res">Resultado:</div>
+    
+    <script>
+        function somar(){
+            let n1 = Number(window.document.querySelector('#n1').value)
+            let n2 = Number(window.document.querySelector('#n2').value)
+            let s = n1 + n2
+            let res = window.document.querySelector('#res')
+
+            res.innerText = `A soma de ${n1} com ${n2} é de   ${s}!`
+        }
+
+        function limpar(){
+            window.location.reload()
+        }
+    </script>
+</body>
+</html>
