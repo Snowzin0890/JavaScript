@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Estrangeiro ou Nativo</h1>
+    <h2>País: <mark>Brasil</mark></h2>
+    <input type="text" id="pais" placeholder="Digite seu país">
+    <input type="submit" value="Verificar" onclick="verificar()">
+    <br><br>
+    <div id="resultado"></div>
+    <script>
+        function verificar(){
+            let p = window.document.querySelector('input#pais').value
+            let res = window.document.querySelector('div#resultado')
+
+            if(p === 'Brasil'){res.innerHTML = 'Você é <strong>Nativo</strong>.'}
+            else{res.innerHTML = 'Você é <strong>Estrangeiro</strong>.'}
+        }
+    </script>
+</body>
+</html>
