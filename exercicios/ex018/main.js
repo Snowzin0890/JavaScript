@@ -17,9 +17,14 @@ function add(){
         item.text = `Valor ${num} adicionado.`
         tab.appendChild(item)
     }
+    numInput.value = ''
+    numInput.focus()
 }
 
 function info(){
+    if(valores.length == 0){
+        alert('[ERRO] Adicione valores antes de finalizar!')
+    }else{
     let org = valores.sort()
     
 
@@ -39,4 +44,5 @@ function info(){
 
     res.innerHTML = `Ao todo, temos ${valores.length} numeros cadastrados. <br><br>O maior valor informado foi ${maior}.
     <br><br>O menor valor informado foi ${org[0]}. <br><br>Somando todo os valores, temos ${soma}. <br><br>A media dos valores digitados e ${media}.`
+    }  
 }
