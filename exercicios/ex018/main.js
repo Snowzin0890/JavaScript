@@ -1,9 +1,11 @@
-valores = []
+let valores = []
+let res  = document.querySelector('div#res')
 
 function add(){
     let numInput = document.querySelector('input#num')
     let num = numInput.value
     
+    res.innerHTML = ''
 
     if(numInput.value.length == 0 || num > 100 || num < 1 || valores.indexOf(Number(num)) != -1){
         alert('Valor invalido ou ja encontrado na lista')
@@ -18,8 +20,8 @@ function add(){
 }
 
 function info(){
-    let res  = document.querySelector('div#res')
     let org = valores.sort()
+    
 
     let maior = valores[0]
     for(let m = 1; m < valores.length; m++){
